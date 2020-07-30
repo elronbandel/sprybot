@@ -22,6 +22,10 @@ logging.basicConfig(level=logging.INFO)
 def check_connection():
   return 'connected'
 
+@app.route('/', methods=['POST'])
+def f():
+  return "SUCCESS!"
+
 @app.route('/ans', methods=['POST'])
 def ans():
   context = "Sprybot is an amazing new platform that help businesses to construct chatbot effortlessly simply by feeding the bot with description of your buisness. Sprybot was founded by group of students from BarIlan University that are enthusiastic about conversational AI. The difference between our Sprybot platform and other chat bots is that constructing traditional chat bot is a long and hard process and with Sprybot you can do it quickly and eaily. You can construct chatbot using our platform just by feeding textual description of you business that contain any details important for costumers. The time it takes to create a bot using our platform is the time takes you to describe your business. In order to create Sprybot we used natural language processing and state of the art deep learning artificial intelligence. At the moment you cant buy our product because its still under construction. Sprybot can answer questions about your business but it can not talk about anything else other than the information was fed to it."
